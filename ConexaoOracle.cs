@@ -10,12 +10,15 @@ namespace MyConexaoOracle
         private static OracleConnection myOracleConnection;
         private static OracleTransaction myOracleTransaction;
         private static OracleCommand myOracleCommand;
-        private static string sParametrosConexao = String.Format("Data Source={0};User Id={1};Password={2};Integrated Security=no;",
-                        Biblioteca.sBancoDados,
-                        Biblioteca.sUsuario,
-                        Biblioteca.sSenha);
+        private static string sBancoDados = "MEUBANCODADOS", 
+                              sUsuario    = "MEUUSUARIO",
+                              sSenha      = "MINHASENHA",
+                              sParametrosConexao = String.Format("Data Source={0};User Id={1};Password={2};Integrated Security=no;",
+                                                                 sBancoDados,
+                                                                 sUsuario,
+                                                                 sSenha);
 
-        #region Funções da classe Conexao
+        #region Funções da classe ConexaoOracle
         public static OracleConnection criarConexaoOracle
         {
             get
